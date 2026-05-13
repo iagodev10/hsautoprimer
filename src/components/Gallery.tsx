@@ -1,38 +1,51 @@
 import { motion } from 'motion/react';
+import { useState } from 'react';
+import acabamentoPremium from '../img/acabamento_premium.png';
+import funilariaEspecializada from '../img/funilaria_especializada.png';
+import pinturaEsportiva from '../img/pintura_esportiva.png';
+import polimentoTecnico from '../img/polimento_tecnico.png';
+import reparoColisao from '../img/reparo_colisao.png';
+import restauracaoCompleta from '../img/restauracao_completa.png';
 
 export default function Gallery() {
+  const [filter, setFilter] = useState('Tudo');
+
   const images = [
     {
-      src: 'https://images.unsplash.com/photo-1635352723068-ffb493630f5c?auto=format&fit=crop&q=80&w=1200',
+      src: pinturaEsportiva,
       title: 'Pintura Esportiva',
       category: 'Pintura'
     },
     {
-      src: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200',
+      src: polimentoTecnico,
       title: 'Polimento Técnico',
       category: 'Estética'
     },
     {
-      src: 'https://images.unsplash.com/photo-1621932953986-15fcfec83275?auto=format&fit=crop&q=80&w=1200',
+      src: funilariaEspecializada,
       title: 'Funilaria Especializada',
       category: 'Funilaria'
     },
     {
-      src: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1200',
+      src: restauracaoCompleta,
       title: 'Restauração Completa',
       category: 'Restauração'
     },
     {
-      src: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=1200',
+      src: acabamentoPremium,
       title: 'Acabamento Premium',
       category: 'Pintura'
     },
     {
-      src: 'https://images.unsplash.com/photo-1542362567-b055002b91f4?auto=format&fit=crop&q=80&w=1200',
+      src: reparoColisao,
       title: 'Reparo de Colisão',
       category: 'Funilaria'
     },
   ];
+
+  const filteredImages = filter === 'Tudo' 
+    ? images 
+    : images.filter(img => img.category === filter);
 
   return (
     <section id="galeria" className="py-24 bg-dark-bg overflow-hidden">
@@ -57,29 +70,33 @@ export default function Gallery() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="flex gap-4"
+            className="flex flex-wrap gap-4"
           >
-            {['Tudo', 'Pintura', 'Funilaria', 'Estética'].map((filter, i) => (
+            {['Tudo', 'Pintura', 'Funilaria', 'Estética', 'Restauração'].map((f) => (
               <button
-                key={i}
+                key={f}
+                onClick={() => setFilter(f)}
                 className={`px-6 py-2 text-xs font-bold uppercase tracking-wider border rounded-full transition-all duration-300 ${
-                  i === 0 ? 'bg-primary-red border-primary-red text-white' : 'border-white/20 text-gray-400 hover:border-primary-red hover:text-white'
+                  filter === f 
+                    ? 'bg-primary-red border-primary-red text-white' 
+                    : 'border-white/20 text-gray-400 hover:border-primary-red hover:text-white'
                 }`}
               >
-                {filter}
+                {f}
               </button>
             ))}
           </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((image, i) => (
+          {filteredImages.map((image, i) => (
             <motion.div
-              key={i}
+              key={image.title}
+              layout
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
               className="group relative aspect-[4/3] overflow-hidden rounded-sm"
             >
               <img
@@ -107,7 +124,7 @@ export default function Gallery() {
           <p className="text-gray-500 text-sm font-light uppercase tracking-[0.2em] mb-4">Veja mais do nosso cotidiano</p>
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="https://instagram.com"
+            href="https://www.instagram.com/hsautoprimerpinturaautomotiva"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-white font-bold group"

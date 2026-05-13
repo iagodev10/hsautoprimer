@@ -21,11 +21,20 @@ export default function Footer() {
               Compromisso com a perfeição e satisfação total de nossos clientes.
             </p>
             <div className="flex gap-4">
-              {[Instagram, Mail].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-400 hover:text-primary-red hover:border-primary-red transition-all duration-300">
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a 
+                href="https://www.instagram.com/hsautoprimerpinturaautomotiva" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-400 hover:text-primary-red hover:border-primary-red transition-all duration-300"
+              >
+                <Instagram size={18} />
+              </a>
+              <a 
+                href="mailto:contato@hsautoprimer.com.br" 
+                className="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-400 hover:text-primary-red hover:border-primary-red transition-all duration-300"
+              >
+                <Mail size={18} />
+              </a>
             </div>
           </div>
 

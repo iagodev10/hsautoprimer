@@ -105,7 +105,12 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="flex gap-4 mt-4">
-                <a href="#" className="p-2 glass rounded-full hover:text-primary-red transition-colors">
+                <a 
+                  href="https://www.instagram.com/hsautoprimerpinturaautomotiva" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-2 glass rounded-full hover:text-primary-red transition-colors"
+                >
                   <Instagram size={20} />
                 </a>
               </div>
