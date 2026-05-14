@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, Clock, Award, Users } from 'lucide-react';
+import professionalImg from '../img/professional.png';
 
 export default function About() {
   const stats = [
@@ -22,10 +23,9 @@ export default function About() {
           >
             <div className="z-10 relative">
               <img
-                src="https://images.unsplash.com/photo-1530046339160-ce3e5b0c7a2f?auto=format&fit=crop&q=80&w=1200"
+                src={professionalImg}
                 alt="Professional Workshop"
-                className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
-                referrerPolicy="no-referrer"
+                className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl w-full h-auto"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full border border-primary-red/30 -z-0"></div>
