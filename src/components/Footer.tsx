@@ -87,7 +87,7 @@ export default function Footer() {
             </h4>
             <div className="h-40 glass rounded-sm overflow-hidden grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m3!1d3774.228186145322!2d-48.248386!3d-18.943960!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a4457e88229fbb%3A0x6a0a73d328328fbb!2sAv.%20Seme%20Sim%C3%A3o%2C%20545%20-%20Granada%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038410-000!5e0!3m2!1sen!2sbr!4v1715636111111!5m2!1sen!2sbr" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6001393468196!2d-48.236475623909286!3d-18.949085208516237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad198529393b1%3A0x16bf30de0cf0a0a2!2sHS%20Auto%20Primer%20Funilaria%20e%20Pintura%20Automotiva!5e0!3m2!1spt-BR!2sbr!4v1778717362882!5m2!1spt-BR!2sbr" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
