@@ -25,7 +25,7 @@ export default function About() {
               <img
                 src={professionalImg}
                 alt="Professional Workshop"
-                className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl w-full h-auto"
+                className="rounded-sm transition-all duration-700 shadow-2xl w-full h-auto"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full border border-primary-red/30 -z-0"></div>

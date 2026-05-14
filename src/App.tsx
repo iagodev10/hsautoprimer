@@ -7,6 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
+import Map from './components/Map';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -67,6 +68,7 @@ export default function App() {
             <Services />
             <Gallery />
             <Reviews />
+            <Map />
             <CTA />
             <Footer />
             <WhatsAppButton />

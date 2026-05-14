@@ -20,6 +20,7 @@ export default function Navbar() {
     { name: 'Serviços', href: '#servicos' },
     { name: 'Galeria', href: '#galeria' },
     { name: 'Avaliações', href: '#avaliacoes' },
+    { name: 'Localização', href: '#localizacao' },
   ];
 
   return (

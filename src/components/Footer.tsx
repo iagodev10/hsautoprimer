@@ -79,24 +79,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          <div>
-            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-8 flex items-center gap-2">
-              <div className="w-4 h-0.5 bg-primary-red"></div>
-              Localização
-            </h4>
-            <div className="h-40 glass rounded-sm overflow-hidden grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6001393468196!2d-48.236475623909286!3d-18.949085208516237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad198529393b1%3A0x16bf30de0cf0a0a2!2sHS%20Auto%20Primer%20Funilaria%20e%20Pintura%20Automotiva!5e0!3m2!1spt-BR!2sbr!4v1778717362882!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
         </div>
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
